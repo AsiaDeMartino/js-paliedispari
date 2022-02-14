@@ -3,18 +3,31 @@
 const input = prompt("Dimmi una parola e io controllerò se è palindroma");
 
     //Creare una funzione per capire se la parola inserita è palindroma
-const parola = input.split('');
-console.log(parola);
+function palindromo (p1) {
 
-let parolaInversa = ('');
+    const parola = p1.split('');
+    console.log(parola);
 
-for (let i = parola.length - 1; i >= 0; i--) {
-    parolaInversa += parola[i];
+    let parolaInversa = ('');
+
+    for (let i = parola.length - 1; i >= 0; i--) {
+        parolaInversa += parola[i];
+    }
+
+    console.log(parolaInversa);
+
+    let controllo = false;
+
+    if (input == parolaInversa) {
+        controllo = true;
+    }
+
+    return controllo;
 }
 
-console.log(parolaInversa);
+check = palindromo(input)
 
-if (input == parolaInversa) {
+if (check == true) {
     alert(`la parola ${input} è palindroma`);
 } else {
     alert(`la parola ${input} non è palindroma`);
