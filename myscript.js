@@ -6,17 +6,15 @@ const input = prompt("Dimmi una parola e io controllerò se è palindroma");
 const parola = input.split('');
 console.log(parola);
 
-const parolaInversa = [];
-let j = 0;
+let parolaInversa = ('');
 
 for (let i = parola.length - 1; i >= 0; i--) {
-    parolaInversa[j] = parola[i];
-    j++;
+    parolaInversa += parola[i];
 }
 
 console.log(parolaInversa);
 
-if (parola == parolaInversa) {
+if (input == parolaInversa) {
     alert(`la parola ${input} è palindroma`);
 } else {
     alert(`la parola ${input} non è palindroma`);
