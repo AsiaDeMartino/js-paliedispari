@@ -18,7 +18,7 @@ function palindromo (p1) {
 
     let controllo = false;
 
-    if (input == parolaInversa) {
+    if (p1 == parolaInversa) {
         controllo = true;
     }
 
