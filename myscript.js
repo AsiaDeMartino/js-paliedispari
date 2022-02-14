@@ -56,6 +56,30 @@ const numeroComputer = getRandomIntInclusive(1,5);
 console.log(numeroComputer,numeroUtente);
 
     //Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-    //Dichiariamo chi ha vinto.
+function somma(n1, n2) {
+    let n3 = n1 + n2;
+    
+    let controllo = false;
 
+    if (n3 % 2 == 0) {
+        controllo = true;
+    } 
+
+    return controllo;
+}
+
+let pari = somma(numeroComputer, numeroUtente);
+
+    //Dichiariamo chi ha vinto.
+if ( pari == true && scelta == "pari" ) {
+    alert(`è uscito pari, hai vinto`);
+} else if (pari == true && scelta == "dispari" ) {
+    alert(`è uscito pari, hai perso`);
+} else if (pari == false && scelta == "dispari") {
+    alert(`è uscito dispari, hai vinto`);
+} else if (pari == false && scelta == "pari" ) {
+    alert(`è uscito dispari, hai perso`);
+} else {
+    alert("devi scegliere pari o dispari!");
+}
 
